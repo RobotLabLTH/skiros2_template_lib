@@ -7,6 +7,7 @@ from skiros2_common.core.primitive import PrimitiveBase
 # Descriptions
 #################################################################################
 
+
 class MyPrimitive(SkillDescription):
     def createDescription(self):
         #=======Params=========
@@ -25,6 +26,7 @@ class my_primitive(PrimitiveBase):
     """
     This primitive has 3 states
     """
+
     def createDescription(self):
         """Set the primitive type"""
         self.setDescription(MyPrimitive(), self.__class__.__name__)
@@ -47,7 +49,7 @@ class my_primitive(PrimitiveBase):
 
     def execute(self):
         """ Main execution function """
-        if self._progress_code<2:
+        if self._progress_code < 2:
             return self.step("Step")
         else:
             return self.success("Done")

@@ -6,6 +6,7 @@ from skiros2_common.core.world_element import Element
 # Descriptions
 #################################################################################
 
+
 class MySkill(SkillDescription):
     def createDescription(self):
         #=======Params=========
@@ -15,6 +16,7 @@ class MySkill(SkillDescription):
 # Implementations
 #################################################################################
 
+
 class my_skill(SkillBase):
     """
     Tree is:
@@ -22,6 +24,7 @@ class my_skill(SkillBase):
     ------->:MyPrimitive
 
     """
+
     def createDescription(self):
         self.setDescription(MySkill(), self.__class__.__name__)
 
